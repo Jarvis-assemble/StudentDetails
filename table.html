@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/public/stylesheet/table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+     <script src="table.js"></script>
+</head>
+<body>
+    <h3>STUDENT DETAILS</h3>
+    <div class="navbar">
+        <a href="/">Add Student</a>
+      
+    </div>
+    <div class="tools">
+        <input id="search" class="Search-field" type="text" placeholder="Enter search term" />
+        <select id="departmentFilter" class="Search-field">
+            <option value="">Select Department</option>
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="ME">ME</option>
+            <option value="CE">CE</option>
+            <!-- Add more options as needed -->
+        </select>
+        <button id="searchButton" class="Search-button">Search</button>
+       
+        <div class="cutoff-range">
+            <label for="cutoffMin">Cutoff Range:</label>
+            <input type="number" id="cutoffMin" class="Search-field" placeholder="Min" value="0" min="0" max="100"/>
+            <input type="number" id="cutoffMax" class="Search-field" placeholder="Max" value="100" min="0" max="100"/>
+            <button id="rangeButton" class="Search-button">Apply Cutoff Range</button>
+        </div>
+        <button id="clearButton" class="Search-button">Clear filters</button>
+    </div>
+    <div class="container">
+        <table class="student-table" id="studentTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Dept</th>
+                    <th>Email</th>
+                    <th>Tel No</th>
+                    <th>Cutoff</th>
+                    <th>Bday</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th>Profile Pic</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table data -->
+            </tbody>
+        </table>
+        <div id="msg"></div>
+        <div id="pagination" class="pagination"></div>
+    </div>
+
+    <div class="edit-form" id="editForm">
+        <h3>Student Entry</h3>
+        <input type="hidden" id="studentId">      
+        <input type="text" id="studentName">
+        <input type="text" id="studentGender">
+        <input type="text" id="studentDept">
+        <input type="email" id="studentEmail">
+        <input type="text" id="studentTelNo">
+        <input type="text" id="studentCutoff">
+        <input type="date" id="studentBday">
+        <input type="text" id="studentCity">
+        <input type="text" id="studentState">
+        <input type="text" id="studentZip">
+        <input type="image" id="image" src="">
+        <button class="btn" onclick="saveStudent()">Save</button>
+    </div>
+</body>
+</html>
