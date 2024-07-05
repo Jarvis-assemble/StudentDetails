@@ -50,10 +50,7 @@ function populateStudentTable(data) {
             <td>${student.email}</td>
             <td>${student.telNo}</td>
             <td>${student.cutoff}</td>
-            <td>${student.bday}</td>
-            <td>${student.inputCity}</td>
-            <td>${student.inputState}</td>
-            <td>${student.inputZip}</td>
+
             <td><img src="http://localhost:3000/images/${student.avatarPath}" alt="Profile Pic" style="width: 50px; height: 50px;"></td>
             <td><a href="#" onclick="viewDetails('${student.id}')"><i class="fa fa-eye"></i></a></td>
         `;

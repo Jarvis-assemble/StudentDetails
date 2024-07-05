@@ -126,7 +126,7 @@ h3 {
 }
 
 .student-table {
-    width: 100%;
+    width:100%;
     border-collapse: collapse;
     margin: 20px 0;
     font-size: 15px;
@@ -134,6 +134,7 @@ h3 {
 }
 
 .student-table th, .student-table td {
+    width:min-content;
     border: 1px solid #ddd;
     padding: 12px;
 }
