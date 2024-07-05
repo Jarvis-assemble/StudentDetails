@@ -1,4 +1,4 @@
-/* General styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,7 +10,8 @@ body {
     display: none;
 }
 
-/* form styles */
+/*pop up styles*/
+
 .edit-form {
     display: none; /* Hide by default */
     flex-direction: column;
@@ -91,7 +92,7 @@ h3 {
     color: black;
 }
 
-/* Tools section */
+/*Tools section*/
 .tools {
     display: flex;
     justify-content: center;

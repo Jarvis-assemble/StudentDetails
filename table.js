@@ -1,26 +1,4 @@
 
-async function viewDetails(studentId) {
-  try {
-      const response = await fetch(`http://localhost:3000/students/${studentId}`);
-      const student = await response.json();
-      document.getElementById('editForm').style.display = 'flex';
-      document.getElementById('studentId').value = student.id;
-      document.getElementById('studentName').value = student.name;
-      document.getElementById('studentGender').value = student.gender;
-      document.getElementById('studentDept').value = student.dept;
-      document.getElementById('studentEmail').value = student.email;
-      document.getElementById('studentTelNo').value = student.telNo;
-      document.getElementById('studentCutoff').value = student.cutoff;
-      document.getElementById('studentBday').value = student.bday;
-      document.getElementById('studentCity').value = student.inputCity;
-      document.getElementById('studentState').value = student.inputState;
-      document.getElementById('studentZip').value = student.inputZip;
-      document.getElementById('image').src=`http://localhost:3000/images/${student.avatarPath}`
-  } catch (error) {
-      console.error('Error fetching student details:', error);
-  }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
 
 console.log('inside script')
@@ -215,3 +193,24 @@ pagesSetup();
 })
 
  
+async function viewDetails(studentId) {
+  try {
+      const response = await fetch(`http://localhost:3000/students/${studentId}`);
+      const student = await response.json();
+      document.getElementById('editForm').style.display = 'flex';
+      document.getElementById('studentId').value = student.id;
+      document.getElementById('studentName').value = student.name;
+      document.getElementById('studentGender').value = student.gender;
+      document.getElementById('studentDept').value = student.dept;
+      document.getElementById('studentEmail').value = student.email;
+      document.getElementById('studentTelNo').value = student.telNo;
+      document.getElementById('studentCutoff').value = student.cutoff;
+      document.getElementById('studentBday').value = student.bday;
+      document.getElementById('studentCity').value = student.inputCity;
+      document.getElementById('studentState').value = student.inputState;
+      document.getElementById('studentZip').value = student.inputZip;
+      document.getElementById('image').src=`http://localhost:3000/images/${student.avatarPath}`
+  } catch (error) {
+      console.error('Error fetching student details:', error);
+  }
+}
